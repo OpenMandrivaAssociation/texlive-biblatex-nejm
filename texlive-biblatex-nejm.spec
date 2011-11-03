@@ -1,3 +1,9 @@
+# revision 24011
+# category Package
+# catalog-ctan /macros/latex/contrib/biblatex-contrib/biblatex-nejm
+# catalog-date 2011-09-09 20:27:18 +0200
+# catalog-license lppl1.3
+# catalog-version 0.4
 Name:		texlive-biblatex-nejm
 Version:	0.4
 Release:	1
@@ -40,6 +46,7 @@ England Journal of Medicine (NEJM).
 %doc %{_texmfdistdir}/doc/latex/biblatex-nejm/README
 %doc %{_texmfdistdir}/doc/latex/biblatex-nejm/biblatex-nejm.pdf
 %doc %{_texmfdistdir}/doc/latex/biblatex-nejm/biblatex-nejm.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,3 +57,5 @@ England Journal of Medicine (NEJM).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
