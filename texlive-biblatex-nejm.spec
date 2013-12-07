@@ -6,7 +6,7 @@
 # catalog-version 0.4
 Name:		texlive-biblatex-nejm
 Version:	0.4
-Release:	4
+Release:	5
 Summary:	Biblatex style for the New England Journal of Medicine (NEJM)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-nejm
