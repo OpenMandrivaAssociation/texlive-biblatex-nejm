@@ -1,18 +1,12 @@
-# revision 24011
-# category Package
-# catalog-ctan /macros/latex/contrib/biblatex-contrib/biblatex-nejm
-# catalog-date 2011-09-09 20:27:18 +0200
-# catalog-license lppl1.3
-# catalog-version 0.4
 Name:		texlive-biblatex-nejm
-Version:	0.5.0
+Version:	49839
 Release:	1
 Summary:	Biblatex style for the New England Journal of Medicine (NEJM)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-nejm
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-nejm.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-nejm.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-nejm.r49839.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/biblatex-nejm.doc.r49839.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ This is a biblatex numeric style based on the design of the New
 England Journal of Medicine (NEJM).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -40,25 +34,10 @@ England Journal of Medicine (NEJM).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.4-2
-+ Revision: 749684
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.4-1
-+ Revision: 717931
-- texlive-biblatex-nejm
-- texlive-biblatex-nejm
-- texlive-biblatex-nejm
-- texlive-biblatex-nejm
-- texlive-biblatex-nejm
-
