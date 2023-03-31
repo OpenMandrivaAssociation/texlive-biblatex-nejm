@@ -1,6 +1,6 @@
 Name:		texlive-biblatex-nejm
 Version:	49839
-Release:	1
+Release:	2
 Summary:	Biblatex style for the New England Journal of Medicine (NEJM)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/biblatex-contrib/biblatex-nejm
